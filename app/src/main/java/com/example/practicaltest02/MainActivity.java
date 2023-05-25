@@ -50,7 +50,8 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             String clientPort = clientPortEditText.getText().toString();
-            if (clientPort.isEmpty()) {
+            String clientAddress = clientAddressEditText.getText().toString();
+            if (clientPort.isEmpty() || clientAddress.isEmpty()) {
                 Toast.makeText(getApplicationContext(), "[MAIN ACTIVITY] Client port should be filled!", Toast.LENGTH_SHORT).show();
                 return;
             }
@@ -63,8 +64,8 @@ public class MainActivity extends AppCompatActivity {
             }
             Log.i("Constants.TAG", "[MAIN ACTIVITY] Word is: " + word);
 
-//            MyClient client = new MyClient(word, Integer.parseInt(clientPort), wordDefinitionTextView);
-//            client.start();
+            MyClient client = new MyClient(word, Integer.parseInt(clientPort), clientAddress, wordDefinitionTextView);
+            client.start();
         }
     }
 
