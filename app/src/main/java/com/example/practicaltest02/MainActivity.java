@@ -77,12 +77,12 @@ public class MainActivity extends AppCompatActivity {
 
         serverPortEditText = (EditText)findViewById(R.id.server_port_edit_text);
         Button connectButton = (Button)findViewById(R.id.connect_button);
+        connectButton.setOnClickListener(connectButtonClickListener);
 
         clientPortEditText = (EditText)findViewById(R.id.client_port_edit_text);
         clientAddressEditText = (EditText)findViewById(R.id.client_address_edit_text);
         wordEditText = (EditText)findViewById(R.id.word_edit_text);
         Button getWordDefinitionButton = (Button)findViewById(R.id.get_info_button);
-        connectButton.setOnClickListener(connectButtonClickListener);
         getWordDefinitionButton.setOnClickListener(getWordDefinitionButtonClickListener);
 
         wordDefinitionTextView = (TextView)findViewById(R.id.word_definition_text_view);
