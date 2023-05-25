@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">PracticalTest02</string>
+    <string name="server">Server</string>
+    <string name="server_port">Server port</string>
+    <string name="connect">Connect</string>
+    <string name="client">Client</string>
+    <string name="client_port">Client port</string>
+    <string name="word">Word</string>
+    <string name="get_info">Get info</string>
+    <string name="client_address">Client address</string>
+</resources>
